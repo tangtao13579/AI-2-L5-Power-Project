@@ -346,7 +346,7 @@ I (..\uCOS-III\uC-LIB\lib_def.h)(0x52736048)
 I (..\uCOS-III\uC-LIB\lib_ascii.h)(0x52736048)
 I (..\uCOS-III\Config\lib_cfg.h)(0x51145768)
 F (..\uCOS-III\uC-LIB\lib_str.h)(0x52736048)()
-F (..\Main\main.c)(0x5EC5F831)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
+F (..\Main\main.c)(0x5EE194BB)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9AD218)
@@ -383,7 +383,7 @@ I (..\uCOS-III\uC-LIB\lib_str.h)(0x52736048)
 I (..\uCOS-III\uC-LIB\lib_ascii.h)(0x52736048)
 I (..\uCOS-III\Source\os_type.h)(0x5B63A85C)
 I (..\uCOS-III\Ports\os_cpu.h)(0x5BCE7322)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 I (..\Main\GlobalOs.h)(0x5E8EB82E)
 I (..\HAL\LED.h)(0x5BCF0EDE)
 I (..\HAL\FlashStorage.h)(0x5BF7E930)
@@ -394,8 +394,8 @@ I (..\Resource\WorkModeManager.h)(0x5BE39B46)
 I (..\Resource\PowerManagement.h)(0x5BEB8E26)
 I (..\HAL\ADCSample.h)(0x5C383860)
 I (..\HAL\TMPSensor.h)(0x5BE401F4)
-F (..\Main\Init.c)(0x5EC5E8B5)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\init.o --omf_browse .\output\init.crf --depend .\output\init.d)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+F (..\Main\Init.c)(0x5ED49DE1)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\init.o --omf_browse .\output\init.crf --depend .\output\init.d)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 I (..\Main\Init.h)(0x5DE74BEB)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\misc.h)(0x52F9EB20)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
@@ -422,10 +422,10 @@ I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm3
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc\stm32f10x_usart.h)(0x52F9EB20)
 I (..\HAL\HardwareVersion.h)(0x5BF7575E)
 F (..\Main\Init.h)(0x5DE74BEB)()
-F (..\Main\GlobalDefine.h)(0x5E8EB6DD)()
+F (..\Main\GlobalDefine.h)(0x5ECC7B19)()
 F (..\Main\GlobalOs.h)(0x5E8EB82E)()
 F (..\Resource\ASProtocol.c)(0x5EBE0700)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\asprotocol.o --omf_browse .\output\asprotocol.crf --depend .\output\asprotocol.d)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 I (..\Resource\ASProtocol.h)(0x5BA89B64)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include\stm32f10x.h)(0x5825386C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm3.h)(0x5D2590B6)
@@ -454,16 +454,16 @@ I (..\HAL\BackupRegister.h)(0x5C330712)
 F (..\Resource\ASProtocol.h)(0x5BA89B64)()
 F (..\Resource\ProtocolAnalysis.c)(0x5E8EB749)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\protocolanalysis.o --omf_browse .\output\protocolanalysis.crf --depend .\output\protocolanalysis.d)
 I (..\Resource\ASProtocol.h)(0x5BA89B64)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 I (..\Resource\ProtocolAnalysis.h)(0x5BA99FCC)
 F (..\Resource\ProtocolAnalysis.h)(0x5BA99FCC)()
 F (..\Resource\WorkModeManager.c)(0x5E8EB6BC)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\workmodemanager.o --omf_browse .\output\workmodemanager.crf --depend .\output\workmodemanager.d)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 F (..\Resource\WorkModeManager.h)(0x5BE39B46)()
-F (..\Resource\PowerManagement.c)(0x5EC5E043)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\powermanagement.o --omf_browse .\output\powermanagement.crf --depend .\output\powermanagement.d)
+F (..\Resource\PowerManagement.c)(0x5EE194ED)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\uCOS-III\uC-LIB -I ..\uCOS-III\uC-CPU -I ..\uCOS-III\Source -I ..\uCOS-III\Ports -I ..\uCOS-III\Config -I ..\Main -I ..\HAL -I ..\BSP -I ..\TaskAppendPackage -I ..\Resource-I.\RTE\Device\STM32F103VE-I.\RTE\_Tracker_AI2_DC_Power-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="529" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o .\output\powermanagement.o --omf_browse .\output\powermanagement.crf --depend .\output\powermanagement.d)
 I (..\HAL\BatteryPower.h)(0x5EBE1E6B)
 I (..\HAL\PVPower.h)(0x5BDA9B1C)
-I (..\Main\GlobalDefine.h)(0x5E8EB6DD)
+I (..\Main\GlobalDefine.h)(0x5ECC7B19)
 I (..\Main\GlobalOs.h)(0x5E8EB82E)
 I (..\uCOS-III\Source\os.h)(0x527359C6)
 I (..\uCOS-III\Config\os_cfg.h)(0x5E7C4988)

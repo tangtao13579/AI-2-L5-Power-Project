@@ -246,7 +246,13 @@ static void ParameterSave(void *p_arg)
  
     while(1)
     {
-        /*System Update*/
+        /*Para update*/
+        if(GlobalVariable.WriteFlag.ConfigParaWrite == 1)
+        {
+            GlobalVariable.WriteFlag.ConfigParaWrite = 0;
+            WriteConfigParaToFlash((unsigned short *)&GlobalVariable.ConfigPara.ComID,sizeof(GlobalVariable.ConfigPara)/2);
+        }
+			  /*System Update*/
         if(GlobalVariable.WorkMode.SystemStatus == 1)    /*Flash wipe*/
         {
             EraseNewSystemFlash();

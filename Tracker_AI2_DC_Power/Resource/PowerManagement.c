@@ -220,7 +220,7 @@ void PowerMangement()
 {
 	  static unsigned char   charge_delay_count = 0;
 	  static unsigned char   switchPv_delay_count = 0;
-	  static unsigned char   switchPv_delay_count1 = 0;
+//	  static unsigned char   switchPv_delay_count1 = 0;
 	  static unsigned short  switchBat_delay_count = 0;
 	  static unsigned short  switchBat_delay_count1 = 0;
 	
