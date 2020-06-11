@@ -12,9 +12,9 @@ static void ConfigParaInit()
 static void FixedParaInit()
 {
     HDVInit();
-    GlobalVariable.FixePara.DeviceEdition = 0x0200;                 //Fireware    : 0.02
+    GlobalVariable.FixePara.DeviceEdition = 0x0300;                 //Fireware    : 0.03
     GlobalVariable.FixePara.DeviceEdition |= GetHardwareVersion();
-	  GlobalVariable.FixePara.DeviceType    = 0x0080;                 //devic type  : 10
+	  GlobalVariable.FixePara.DeviceType    = 0x0080;                 //devic type  : 0x80
 }
 
 

@@ -3,8 +3,15 @@
 #include "stm32f10x.h"
 #include "core_cm3.h"
 #include "BackupRegister.h"
+#include "stm32f10x_rtc.h"
+#include "RtcLocalModule.h"
+#include "os.h"
+#include "stm32f10x_rcc.h"
 
 extern GlobalVariableDef GlobalVariable;
+unsigned short us_tick = 0;
+unsigned char  uc_rtcFlag = 0;
+unsigned char test_rtc = 0;
 /***************************************************************************************************
                                      Private Variable
 ***************************************************************************************************/
@@ -62,12 +69,67 @@ static void RWWorkMode2(unsigned char R_or_RW, unsigned short *value )
         {
             NVIC_SystemReset();
         }
+				else if((GlobalVariable.WorkModeBuffer.WorkMode & 0xFF) == 0xFE)//停机模式
+        {
+            GlobalVariable.WorkModeBuffer.WorkMode = AUTO_TRACKER_MODE; 
+					  RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE);	//使能PWR外设时钟
+	          
+					  EXTI_InitTypeDef EXTI_InitStructure;
+ 	          NVIC_InitTypeDef NVIC_InitStructure;
+  	        RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);	//使能复用功能时钟
+
+						//GPIOE.2 中断线以及中断初始化配置   下降沿触发
+						GPIO_EXTILineConfig(GPIO_PortSourceGPIOA,GPIO_PinSource10);
+
+						EXTI_InitStructure.EXTI_Line=EXTI_Line10;	//PA10
+						EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
+						EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
+						EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+						EXTI_Init(&EXTI_InitStructure);	 	//根据EXTI_InitStruct中指定的参数初始化外设EXTI寄存器
+
+  	        NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;			//使能按键WK_UP所在的外部中断通道
+						NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x02;	//抢占优先级2， 
+						NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x03;					//子优先级3
+						NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//使能外部中断通道
+						NVIC_Init(&NVIC_InitStructure); 
+            
+						IWDG_ReloadCounter(); 
+						IWDG_WriteAccessCmd(IWDG_WriteAccess_Enable);
+						IWDG_SetPrescaler(IWDG_Prescaler_256);
+						IWDG_SetReload(0xFFF); 
+						IWDG_ReloadCounter();
+						
+            RTC_Local_Init();
+						
+						us_tick = SysTick->CTRL;
+			      SysTick->CTRL  = 0; 
+	          PWR_EnterSTOPMode(PWR_Regulator_LowPower, PWR_STOPEntry_WFI);//STOP模式
+						OS_ERR err; 
+						OSSchedLock(&err);
+						while(1)
+						{
+							if(uc_rtcFlag==1)
+							{
+								uc_rtcFlag = 0;
+								SysTick->CTRL = us_tick;
+								SystemInit();
+								OS_CPU_SysTickInit(720000); 
+								IWDG_ReloadCounter();
+								RCC_LSICmd(ENABLE);
+								RTC_WaitForSynchro();	
+								RTC_Local_Init();
+								us_tick = SysTick->CTRL;
+			          SysTick->CTRL  = 0; 
+	              PWR_EnterSTOPMode(PWR_Regulator_LowPower, PWR_STOPEntry_WFI);//STOP模式
+							}
+						} 
+        }
         else if ((GlobalVariable.WorkModeBuffer.WorkMode & 0xFF) == AUTO_AI_MODE)
         {
             if((GlobalVariable.WorkMode.WorkMode & 0xFF) == AUTO_TRACKER_MODE)
             {
                 GlobalVariable.WorkMode.WorkMode = GlobalVariable.WorkModeBuffer.WorkMode;
-				GlobalVariable.AIPara.AIRemoteAngle=GlobalVariable.Motor[0].ActualAngle;
+				        GlobalVariable.AIPara.AIRemoteAngle=GlobalVariable.Motor[0].ActualAngle;
             }
         }
         else
@@ -76,6 +138,13 @@ static void RWWorkMode2(unsigned char R_or_RW, unsigned short *value )
         }
     }
 }
+
+void EXTI15_10_IRQHandler(void)
+{
+	  NVIC_SystemReset();  
+}
+ 
+
 static void RWarningAndFault1(unsigned char R_or_RW, unsigned short *value )
 {
     if(R_or_RW == 0)

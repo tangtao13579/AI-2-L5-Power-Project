@@ -80,7 +80,7 @@ static void UART1Init()
     GPIOInitStruc.GPIO_Speed = GPIO_Speed_2MHz;
     GPIO_Init(GPIOA, &GPIOInitStruc);	
     RX_EN_485();	                               //ƒ¨»œΩ” ’
-		 
+		 		 
     /* Power PIN-Hardware power:reset*/
     GPIOInitStruc.GPIO_Pin   = GPIO_Pin_14;
     GPIOInitStruc.GPIO_Mode  = GPIO_Mode_Out_PP;

@@ -186,5 +186,7 @@ typedef struct
     
 }GlobalVariableDef;
 
+extern unsigned short us_tick;
+extern unsigned char  uc_rtcFlag;
 #endif
 
